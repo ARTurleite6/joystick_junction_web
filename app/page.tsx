@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "./components/navbar";
 import GamesList from "./components/games_list";
+import GameThumbnail from "./components/game_thumbnail";
 import TopReviewed from "./components/top_reviewed";
 import HotList from "./components/hot_list";
 
@@ -9,6 +10,7 @@ export default function Home() {
         <div>
 
             <div className="w-2/3">
+                GAMES LIST
                 <GamesList />
             </div>
 
