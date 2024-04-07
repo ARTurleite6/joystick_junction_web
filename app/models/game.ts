@@ -1,10 +1,9 @@
 interface Game {
     id: number;
-    cover: {
-        url:string};
+    image_url: string;
     name: string;
-    rating: number;
+    total_rating: number;
     summary: string;
     tags?: string[];
-    play_time?:number
+    play_time?: number
 }
