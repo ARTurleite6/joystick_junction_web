@@ -1,5 +1,7 @@
 'use client';
 
+import LogoVerbose from "./logo_verbose";
+
 export default function Navbar() {
 
     function redirect() {
@@ -8,15 +10,10 @@ export default function Navbar() {
 
     return (
         <nav className="flex justify-between items-center w-full bg-dark_bg h-32 p-10">
-            <div className="flex">
-                <h1 className="font-bold text-4xl">
-                    <span className="text-">J</span>oystick
-                </h1>
-                <img src="joystick.svg" className="h-12" />
-                <h1 className="font-bold text-white text-4xl">
-                    Junction
-                </h1>
-            </div>
+            <a href="/#">
+            <LogoVerbose />
+
+            </a>
             <div className="flex gap-6 font-bold">
 
                 <div className="text-white/60 hover:text-white/100">Login</div>
