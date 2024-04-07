@@ -1,9 +1,7 @@
 "use client"
 import Image from "next/image";
-import Navbar from "./components/navbar";
-import GamesList from "./components/games_list";
-import GameThumbnail from "./components/game_thumbnail";
-import TopReviewed from "./components/top_reviewed";
+import GamesList from "@/app/components/games_list";
+import TopReviewed from "@/app/components/top_reviewed";
 import { useState, useEffect } from "react";
 
 export default function Home() {

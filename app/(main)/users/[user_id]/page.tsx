@@ -35,13 +35,13 @@ export default function User() {
         <div className="w-full grid grid-cols-3">
             <div className="">
 
-            <UserAvatar user={john} size={100} />
+                <UserAvatar user={john} size={100} />
             </div>
-            
+
             <div className="flex flex-col gap-4 col-span-2">
                 <h2 className="text-4xl font-bold" >
 
-                {john.username}'s reviews
+                    {john.username}'s reviews
                 </h2>
                 {reviews.map(review =>
                     <ReviewGame {...review} />
