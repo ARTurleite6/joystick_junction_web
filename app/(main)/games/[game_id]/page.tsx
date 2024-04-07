@@ -47,7 +47,7 @@ export default function Game() {
         <>
             <div className="h-full flex flex-col gap-20 items-center ">
                 <div className="flex gap-10">
-                    <img src={game.image_url} alt="game" />
+                    <img src={game.image_url.replace("thumb", "1080p")} alt="game" />
                     <div className="w-1/2">
                         <h1 className="font-bold text-4xl mb-6">{game.name}</h1>
                         <p>{game.summary}</p>

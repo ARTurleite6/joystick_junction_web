@@ -16,7 +16,7 @@ export default function ReviewGame(review: Review) {
                     data-twe-ripple-color="light"
                     key={review.game.id}
                 >
-                    <img src={`https:${review.game.image_url}`} alt={review.game.name} className="h-full" />
+                    <img src={`https:${review.game.image_url?.replace("thumb", "1080p") ?? ""}`} alt={review.game.name} className="h-full" />
                 </div>
             </a>
             <div className=" w-full h-40">
