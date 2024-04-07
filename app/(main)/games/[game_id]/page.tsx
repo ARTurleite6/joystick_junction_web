@@ -1,15 +1,8 @@
 import Navbar from "@/app/components/navbar";
-import Review from "@/app/components/review";
+import ReviewUser from "@/app/components/review_user";
+import { game1 } from "@/app/examples/games";
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 export default function Game() {
-    const game: Game = {
-        id: 1,
-        name: "Cyberpunk 2077",
-        cover: {
-            url: "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.png",
-        },
-        summary: "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality. You can customize your character’s cyberware, skillset and playstyle, and explore a vast city where the choices you make shape the story and the world around you.",
-        rating: 90
-    };
 
     const john: User = {
         username: "Johny41",
@@ -17,11 +10,11 @@ export default function Game() {
     }
 
     const reviews: Review[] = [
-        { 
+        {
             rating: 5,
             description: "twas a good game, I swear wdidnddoiaosdnasoidoasdaisdsbuadibgafiukh jhgdsbas iud Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos magnam harum labore quisquam tempore maxime nobis. Quod ducimus iusto cumque sint saepe! Earum nihil libero itaque ut atque fugiat odit! ",
             user: john,
-            game: game,
+            game: game1,
             like_count: 1,
         }
 
@@ -30,12 +23,23 @@ export default function Game() {
     return (
         <>
             <div className="h-full flex flex-col gap-20 ">
-
                 <div className="flex gap-10">
-                    <img src={game.cover.url} alt="game" />
-                    <div className="w-1/2 flex flex-col gap-10">
-                        <h1 className="font-bold text-4xl">{game.name}</h1>
-                        <p>{game.summary}</p>
+                    <img src={game1.cover.url} alt="game" />
+                    <div className="w-1/2">
+                        <h1 className="font-bold text-4xl mb-6">{game1.name}</h1>
+                        <p>{game1.summary}</p>
+                        <div className="mt-4 flex justify-between">
+                            <div className="flex gap-2">
+                                {game1.tags?.map(tag => <span className="underline bg-space_cadet_light px-2 p-1 rounded-xl">#{tag}</span>)}
+                            </div>
+                            <div className="">
+                                {game1.play_time && <>
+                                    <AccessTimeIcon /> {game1.play_time} hrs
+                                </>
+                                }
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <div className="w-full border-b border-white/50 "></div>
@@ -46,7 +50,7 @@ export default function Game() {
 
                         {reviews.map((review) => {
                             return <>
-                                <Review {...review} />
+                                <ReviewUser {...review} />
                             </>
 
                         })}
@@ -56,7 +60,7 @@ export default function Game() {
 
                         {reviews.map((review) => {
                             return <>
-                                <Review {...review} />
+                                <ReviewUser {...review} />
                             </>
 
                         })}
