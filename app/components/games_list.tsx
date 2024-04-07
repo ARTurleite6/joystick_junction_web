@@ -18,7 +18,7 @@ export default function GamesList() {
     return (
         <div className="grid grid-cols-6 gap-4 overflow-scroll">
             {
-                games.map((game:Game) => {
+                games.map((game: Game) => {
                     return (<>
                         <GameThumbnail game={game} images={[]} />
                         <div
@@ -27,10 +27,10 @@ export default function GamesList() {
                             data-twe-ripple-color="light"
                             key={game.id}
                         >
-                            <img src={`https:${game.cover?.url}`} alt={game.name} className="w-full h-full" />
+                            <img src={`https:${game.image_url}`} alt={game.name} className="w-full h-full" />
                             <a href={`games/${game.id}`}>
-                                <div className="absolute flex items-center bottom-0 top-0 h-full w-full bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
-                                    <div className="font-bold center py-2.5 px-3 text-black-700 ml-[45%] rounded-full bg-green-500 flex items-center justify-center font-mono">{Math.round(game.rating)}</div>
+                                <div className="absolute flex items-center bottom-0 right-0 h-full w-full bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                                    <div className=" absolute bottom-2 right-2  font-bold h-10 w-10 text-black ml-[45%] rounded-full bg-green-200 flex items-center justify-center font-mono">85</div>
                                 </div>
                             </a>
                         </div>

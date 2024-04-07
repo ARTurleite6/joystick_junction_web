@@ -1,8 +1,6 @@
 interface Game {
     id: number;
-    cover: {
-        url: string;
-    };
+    image_url: string;
     name: string;
     rating: number;
     summary: string;
