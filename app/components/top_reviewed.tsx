@@ -17,11 +17,6 @@ export default function TopReviewed() {
     }, []);
 
 
-    if (games == []) return (<div>Loading...</div>)
-    return (
-
-
-        < GamesList games={games} />
-
+    return (< GamesList games={games} />
     );
 }
